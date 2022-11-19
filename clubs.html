@@ -22,18 +22,64 @@
         </ul>
         <i class="fa-solid fa-arrow-right-from-bracket"></i>
     </div>
-    
     <div class="main-container">
-        <form action="./oop mvc php/createClub.php" method="post">
-            <label for="nom">Nom du club:</label>
-            <input type="text" name="nom">
-            <label for="description">description :</label>
-            <input type="text" name="description">
-            <label for="datecreation">date de creation :</label>
-            <input type="text" name="datecreation">
-            <input type="file" id="myFile" name="logo">
-            <button type="submit">submit</button>
-        </form>
+        
+        <div class="header">
+            <div class="left">
+                <h1 class="club_name">ARTS</h1>
+                <p class="member_count">members: 16</p>
+                <button class="modifier">modifier</button>
+            </div>
+            <div class="middle">
+                <h2 class="representant">represantant:</h2>
+                <p class="representant_name"> achchaimae khalaf</p>
+                <button class="modifier">modifier</button>
+            </div>
+            <div class="right">
+                <div class="logo"></div>
+                <button class="modifier"><i class="fa-solid fa-pen"></i></button>
+            </div>
+        </div>
+        <div class="description">
+            <h2>description:</h2>
+            <div class="textarea"></i>
+                <textarea name="" id="" ></textarea>
+                <button class="modifier">
+                    <i class="fa-solid fa-pen"></i>
+                </button>
+
+            </div>
+        </div>
+        <div class="events">
+            <h2>events:</h2>
+
+            <table id="events" class="events-table">
+            <tr>
+                <th>organisateur</th>
+                <th>date</th>
+                <th>nom d'evenement</th>
+                <th>invites</th>
+                <th>modifier</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+                <td>Germany</td>
+                <td >
+                    <div class="buttons-cell">
+                        <button><i class="fa-solid fa-pen"></i></button>
+                        <button><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </td>
+            </tr>
+            
+            
+            
+            
+            </table>
+            <button class="modifier">Ajouter</button>
+        </div>
     </div>
 </body>
 </html>

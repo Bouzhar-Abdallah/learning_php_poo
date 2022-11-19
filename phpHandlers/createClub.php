@@ -8,3 +8,5 @@
 
     $clubObj = new ClubsContr;
     $clubObj->createUser($nom,$description,$datecreation,$logo);
+    header('Location: ../admin.php');
+    
