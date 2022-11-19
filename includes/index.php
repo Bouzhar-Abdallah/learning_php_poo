@@ -1,3 +1,4 @@
+<?php include 'newclass.inc.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,11 +9,12 @@
 </head>
 <body>
 
-    <?php
-        include 'newclass.inc.php';
-        $pet1 = new pet();
-        echo $pet1->owner();
+    
 
+    <?php 
+      $person1 = new Person("abdallah","brown",32);
+      echo $person1->getName();
+    
     ?>
 </body>
 </html>
