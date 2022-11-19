@@ -6,5 +6,5 @@
     $datecreation= $_POST['datecreation'];
     $logo= $_POST['logo'];
 
-    $clubObj = new UsersContr;
+    $clubObj = new ClubsContr;
     $clubObj->createUser($nom,$description,$datecreation,$logo);

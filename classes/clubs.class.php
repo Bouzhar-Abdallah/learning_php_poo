@@ -1,8 +1,8 @@
 <?php
 
-class Users extends Dbh {
+class clubs extends Dbh {
     
-    protected function getUser($nom){
+    protected function getClub($nom){
         $sql = "select * from club where nom = ?";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$nom]);
@@ -10,7 +10,7 @@ class Users extends Dbh {
         $results = $stmt->fetchAll();
         return $results;
     }
-    protected function setUser($nom,$description,$datecreation,$logo){
+    protected function setClub($nom,$description,$datecreation,$logo){
         $sql = "insert into club (nom,description,date_creation,logo) values(?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
         $stmt->execute([$nom,$description,$datecreation,$logo]);
