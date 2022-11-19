@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
+
+    <?php
+        include 'newclass.inc.php';
+        $pet1 = new person();
+        echo $pet1->owner();
+
+    ?>
 </body>
 </html>
