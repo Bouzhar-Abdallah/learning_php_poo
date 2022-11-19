@@ -1,4 +1,5 @@
 <?php
+    require_once 'dbh.class.php';
 
 class Test extends Dbh {
     public function getUsers(){
