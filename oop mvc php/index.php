@@ -10,15 +10,17 @@
     <title>Document</title>
 </head>
 <body>
-
-    
-
-    <?php 
-        $person1 = new Person("abdallah",34);
-        $house1 = new House('test',45);
-        echo $person1->name;
-        echo '<br>';
-        echo $house1->name;
-    ?>
+    <form action="../includes/calc.inc.php" method="post">
+        <p>my own calculator</p>
+        <input type="number" name="num1" placeholder="first number">
+        <select name="oper" id="">
+            <option value="add">addition</option>
+            <option value="sub">substraction</option>
+            <option value="div">division</option>
+            <option value="mul">miltiplay</option>
+        </select>
+        <input type="number" name="num2" placeholder="second number">
+        <button type="submit" name="submit">calculate</button>
+    </form>
 </body>
 </html>
