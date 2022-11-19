@@ -10,7 +10,7 @@
 
     <?php
         include 'newclass.inc.php';
-        $pet1 = new person();
+        $pet1 = new pet();
         echo $pet1->owner();
 
     ?>
