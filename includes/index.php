@@ -12,9 +12,10 @@
     
 
     <?php 
-      $person1 = new Person("abdallah","brown",32);
-      echo $person1->getName();
-    
+        echo person::$drinkingAge;
+        Person::setDrinkingAge(18); 
+        echo person::$drinkingAge;
+
     ?>
 </body>
 </html>
