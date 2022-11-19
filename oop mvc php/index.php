@@ -10,6 +10,11 @@
     <title>Document</title>
 </head>
 <body>
-   
+    <?php
+
+        $testObj = new Test();
+        $testObj->setUsersStmt("dabachof","33","hdejhdejfhefrjvjhbvjrhb");
+        
+    ?>
 </body>
 </html>
