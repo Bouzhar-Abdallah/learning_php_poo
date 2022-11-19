@@ -10,17 +10,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="../includes/calc.inc.php" method="post">
-        <p>my own calculator</p>
-        <input type="number" name="num1" placeholder="first number">
-        <select name="oper" id="">
-            <option value="add">addition</option>
-            <option value="sub">substraction</option>
-            <option value="div">division</option>
-            <option value="mul">miltiplay</option>
-        </select>
-        <input type="number" name="num2" placeholder="second number">
-        <button type="submit" name="submit">calculate</button>
-    </form>
+    <?php
+
+        $testObj = new Test();
+        $testObj->setUsersStmt("dabachof","33","hdejhdejfhefrjvjhbvjrhb");
+    
+    ?>
 </body>
 </html>
