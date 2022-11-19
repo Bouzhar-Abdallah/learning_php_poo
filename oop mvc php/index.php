@@ -1,4 +1,6 @@
-<?php include 'newclass.inc.php';?>
+<?php 
+    include '../includes/autoloader.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,10 +14,11 @@
     
 
     <?php 
-        echo person::$drinkingAge;
-        Person::setDrinkingAge(18); 
-        echo person::$drinkingAge;
-
+        $person1 = new Person("abdallah",34);
+        $house1 = new House('test',45);
+        echo $person1->name;
+        echo '<br>';
+        echo $house1->name;
     ?>
 </body>
 </html>
