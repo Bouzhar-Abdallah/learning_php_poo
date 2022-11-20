@@ -1,7 +1,7 @@
 <?php
 require_once PROJ_DIR . "/views/header.php";
 ?>
-
+<link rel="stylesheet" href="views/css/styles.css">
 <div class="main-container">
         
         <div class="clubs">

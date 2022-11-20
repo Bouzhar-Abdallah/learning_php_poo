@@ -239,9 +239,9 @@ h2,h1,th{
 .modifier_event {
     background-color: #5E87F5;
 }
-.left,.middle{
+/* .left,.middle{
     width: min-content;
-}
+} */
 .modifier img{
     height: 14px;
     margin: auto auto;

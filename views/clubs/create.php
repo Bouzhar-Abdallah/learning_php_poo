@@ -10,7 +10,7 @@ require_once PROJ_DIR . "/views/header.php";
             <input type="text" name="description">
             <label for="datecreation">date de creation :</label>
             <input type="text" name="datecreation">
-            <!-- <input type="file" id="myFile" name="logo"> -->
+            <input type="file" id="myFile" name="logo">
             <button type="submit">submit</button>
         </form>
     </div>

@@ -2,6 +2,7 @@
 require_once PROJ_DIR . "/views/header.php";
 ?>
 
+<link rel="stylesheet" href="views/css/clubs.css">
 
 <div class="main-container">
         
@@ -17,14 +18,14 @@ require_once PROJ_DIR . "/views/header.php";
                 <button class="modifier">modifier</button>
             </div>
             <div class="right">
-                <div class="logo"></div>
+                <div class="logo"><?php echo $club["logo"]; ?></div>
                 <button class="modifier"><i class="fa-solid fa-pen"></i></button>
             </div>
         </div>
         <div class="description">
             <h2>description:</h2>
             <div class="textarea"></i>
-                <textarea name="" id="" ></textarea>
+                <textarea name="" id="" ><?php echo $club["description"]; ?></textarea>
                 <button class="modifier">
                     <i class="fa-solid fa-pen"></i>
                 </button>
