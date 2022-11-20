@@ -1,24 +1,29 @@
 <?php
+include_once PROJ_DIR . "/classes/dbh.class.php";
+class ClubModel extends dbh{
 
-class ClubModel  {
-
-    protected $id;
-    protected $name;
-    protected $description;
-
-    public function createClub($payload){
-        $sql = "insert into club (nom,description,date_creation,logo) values(?,?,?,?)";
-       // $stmt = $this->connect()->prepare($sql);
-       // $stmt->execute([$payload["name"],$description,$datecreation,$logo]);
+    public function createClub($nom,$description,$datecreation){
+        $sql = "insert into club (nom,description,date_creation) values(?,?,?)";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute([$nom,$description,$datecreation]);
     }
 
     public function listClubs(){
-       return [
-            0=>["id"=>1, "name"=>"club1"],
-            1=>["id"=>2, "name"=>"club2"]
-,       ];
+        $sql = "select * from club";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+       return $stmt;
+            /* 0=>["id"=>1, "name"=>"club1"],
+            1=>["id"=>2, "name"=>"club2"], */
+        
     }
     public function getClub($id){
-       return ["id"=>1, "name"=>"club1"];
+        $sql = "select * from club where id=$id";
+        $stmt = $this->connect()->prepare($sql);
+        $stmt->execute();
+        $results = $stmt->fetch();
+        return $results;
+      /*  return $stmt; */
+       
     }
 } 

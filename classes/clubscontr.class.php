@@ -2,15 +2,26 @@
 
 include_once PROJ_DIR . "/models/ClubModel.php";
 
-class ClubsContr  {
+class ClubsContr {
    
     protected $model;
     public function __construct()
     {
         $this->model = new ClubModel();
     }
-    public function createClub(){
-       echo "display create form";
+
+    public function newClubForm(){
+        require_once PROJ_DIR . "/views/clubs/create.php";
+        
+        /* if(isset($_post["nom"])) */
+            /* $this->model->createClub($_POST["nom"],$_POST["description"],$_POST["datecreation"]); */
+        return;
+    }
+    public function createNewClub($nom,$description,$datecreation){
+     
+         $this->model->createClub($nom,$description,$datecreation);
+         header('Location: ./index.php');
+        return;
     }
     public function listClubs(){
         //Get List
@@ -22,7 +33,7 @@ class ClubsContr  {
         if(isset($_GET["id"]) && intval($_GET["id"]) > 0){
             $id = intval($_GET["id"]);
             //Get one club
-            $$club = $this->model->getClub($id);
+            $club = $this->model->getClub($id);
             require_once PROJ_DIR . "/views/clubs/edit.php";
             return;
         } else {

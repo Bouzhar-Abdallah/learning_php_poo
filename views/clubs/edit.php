@@ -7,7 +7,7 @@ require_once PROJ_DIR . "/views/header.php";
         
         <div class="header">
             <div class="left">
-                <h1 class="club_name">ARTS</h1>
+                <h1 class="club_name"><?php echo $club["nom"]; ?></h1>
                 <p class="member_count">members: 16</p>
                 <button class="modifier">modifier</button>
             </div>

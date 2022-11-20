@@ -5,15 +5,19 @@ define("PROJ_DIR", dirname(__FILE__));
 include './classes/ClubsContr.class.php';
 
 
-
+$clubCtl = new ClubsContr();
 if(isset($_GET['c'])){
    
     if($_GET['c'] === "Clubs"){
 
-        $clubCtl = new ClubsContr();
+        
         if(isset($_GET['a'])){
-            if($_GET['a'] === "create"){
-                $clubCtl->createClub();
+            if($_GET['a'] === "newClubForm"){
+                $clubCtl->newClubForm();
+                return;
+            }
+            if($_GET['a'] === "createNewClub"){
+                $clubCtl->createNewClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],);
                 return;
             }
             if($_GET['a'] === "list"){
@@ -29,6 +33,8 @@ if(isset($_GET['c'])){
         $clubCtl->index();
         return;
     }
+} else {
+        /* header('Location: ./admin.php'); */
+        $clubCtl->listClubs();
 }
 
-echo "hello";
