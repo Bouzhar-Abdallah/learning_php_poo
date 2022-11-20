@@ -17,9 +17,9 @@ class ClubsContr {
             /* $this->model->createClub($_POST["nom"],$_POST["description"],$_POST["datecreation"]); */
         return;
     }
-    public function createNewClub($nom,$description,$datecreation){
+    public function createNewClub($nom,$description,$datecreation,$logo){
      
-         $this->model->createClub($nom,$description,$datecreation);
+         $this->model->createClub($nom,$description,$datecreation,$logo);
          header('Location: ./index.php');
         return;
     }

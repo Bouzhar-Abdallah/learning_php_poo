@@ -18,6 +18,7 @@ require_once PROJ_DIR . "/views/header.php";
                 <button class="modifier">modifier</button>
             </div>
             <div class="right">
+            
                 <div class="logo"><?php echo $club["logo"]; ?></div>
                 <button class="modifier"><i class="fa-solid fa-pen"></i></button>
             </div>

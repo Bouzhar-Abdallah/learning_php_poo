@@ -17,7 +17,7 @@ if(isset($_GET['c'])){
                 return;
             }
             if($_GET['a'] === "createNewClub"){
-                $clubCtl->createNewClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],);
+                $clubCtl->createNewClub($_POST["nom"],$_POST["description"],$_POST["datecreation"],$_POST["logo"]);
                 return;
             }
             if($_GET['a'] === "list"){
