@@ -17,18 +17,19 @@ class TodoContr {
           header('Location: ./index.php');
         return;
     }
-    public function showTodo(){
+  /*   public function listTodo(){
         //Get List
         $Todo = $this->model->listTodo();
         
          require_once PROJ_DIR . "/views/todos/list.php";
-        return;
-    }
+        return ;
+    } */
     public function deleteTodo(){
         if(isset($_GET["id"]) && intval($_GET["id"]) > 0){
             $id = intval($_GET["id"]);
             //Get one club
             $this->model->DeleteTodo($id);
+            header('Location: ./index.php');
             return;
         } else {
             die("Id is required");

@@ -23,13 +23,13 @@ class ClubsContr {
          header('Location: ./index.php');
         return;
     }
-    public function listClubs(){
+   /*  public function listClubs(){
         //Get List
         $list = $this->model->listClubs();
         
-        require_once PROJ_DIR . "/views/clubs/list.php";
-        return;
-    }
+         require_once PROJ_DIR . "/views/clubs/list.php"; 
+        return PROJ_DIR . "/views/clubs/list.php";;
+    } */
     public function editClub(){
         if(isset($_GET["id"]) && intval($_GET["id"]) > 0){
             $id = intval($_GET["id"]);

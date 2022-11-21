@@ -229,7 +229,7 @@ h3{
 .todo .add-button{
     position: absolute;
     right: 0;
-    background-color: transparent;
+    background-color: #5E87F5;
     fill: #1D0E2C;
 }
 .add-todo{
