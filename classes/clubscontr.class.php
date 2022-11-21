@@ -26,6 +26,7 @@ class ClubsContr {
     public function listClubs(){
         //Get List
         $list = $this->model->listClubs();
+        
         require_once PROJ_DIR . "/views/clubs/list.php";
         return;
     }

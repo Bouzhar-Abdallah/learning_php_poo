@@ -1,5 +1,6 @@
 <?php
 require_once PROJ_DIR . "/views/header.php";
+
 ?>
 
 <div class="main-container">
