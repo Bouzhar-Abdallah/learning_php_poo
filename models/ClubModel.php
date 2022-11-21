@@ -5,7 +5,8 @@ class ClubModel extends dbh{
     public function createClub($nom,$description,$datecreation,$logo){
         $sql = "insert into club (nom,description,date_creation,logo) values(?,?,?,?)";
         $stmt = $this->connect()->prepare($sql);
-        $stmt->execute([$nom,$description,$datecreation,$logo]);
+        print $stmt->execute([$nom,$description,$datecreation,$logo]);
+        var_dump($this->connect());
     }
 
     public function listClubs(){
@@ -18,6 +19,7 @@ class ClubModel extends dbh{
             1=>["id"=>2, "name"=>"club2"], */
         
     }
+
     public function getClub($id){
         $sql = "select * from club where id=$id";
         $stmt = $this->connect()->prepare($sql);
