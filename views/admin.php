@@ -36,9 +36,11 @@ require_once PROJ_DIR . "/views/header.php";
             
         </div>
         <div class="right">
-        <div class="calender">
-            <h3>Calender</h3>
-        </div>  
+        
+        <?php
+      require_once PROJ_DIR . "/calendar.php";
+?>
+
         <div class="todo">
         <div class="header">
                 <div class="add-todo">
