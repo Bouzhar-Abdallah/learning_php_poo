@@ -60,8 +60,8 @@ if(isset($_GET['c'])){
 } //global variable is not set
 else {
         //header('Location: ./admin.php'); 
-        
-        $Viewcls->updateAdmin();
+        $clubCtl->getmembers(13);
+        /* $Viewcls->updateAdmin(); */
 
 /*         require_once PROJ_DIR . "/views/admin.php"; 
  */}
